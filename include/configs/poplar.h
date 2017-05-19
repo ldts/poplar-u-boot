@@ -39,6 +39,16 @@
 /* SD/MMC */
 #define CONFIG_BOUNCE_BUFFER
 
+/* Network config */
+#define CONFIG_MII				1
+#define CONFIG_NET_MULTI			1
+#define CONFIG_PHY_GIGE				1
+#define CONFIG_ARP_TIMEOUT			500000L
+#define CONFIG_NET_RETRY_COUNT 			50
+#define CONFIG_SYS_FAULT_ECHO_LINK_DOWN 	1
+#define CONFIG_SYS_RX_ETH_BUFFER		16
+#define CONFIG_NET_RANDOM_ETHADDR
+
 /*****************************************************************************
  *  Initial environment variables
  *****************************************************************************/

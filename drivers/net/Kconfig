@@ -225,4 +225,9 @@ config GMAC_ROCKCHIP
 	  This driver provides Rockchip SoCs network support based on the
 	  Synopsys Designware driver.
 
+config NET_HIGMACV300
+       bool "Hisilicon Gigabit Controller"
+       help
+       This driver provides Hisilicon SoCs network support
+
 endif # NETDEVICES

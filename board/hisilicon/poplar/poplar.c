@@ -14,6 +14,8 @@
 
 DECLARE_GLOBAL_DATA_PTR;
 
+extern void eth_config_init(void);
+
 static struct mm_region poplar_mem_map[] = {
 	{
 		.virt = 0x0UL,
@@ -34,6 +36,23 @@ static struct mm_region poplar_mem_map[] = {
 };
 
 struct mm_region *mem_map = poplar_mem_map;
+
+
+int misc_init_r(void)
+{
+
+	return 0;
+}
+
+int board_eth_init(bd_t *bd)
+{
+	int ret = 0;
+
+	ret = higmac_initialize(bd);
+
+	return ret;
+}
+
 
 int checkboard(void)
 {
